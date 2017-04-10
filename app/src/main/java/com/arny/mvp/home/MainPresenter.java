@@ -16,10 +16,13 @@
  *
  */
 
-package com.arny.mvp.login;
+package com.arny.mvp.home;
 
-public interface LoginPresenter {
-    void validateCredentials(String username, String password);
+public interface MainPresenter {
+
+    void onResume();
+
+    void onItemClicked(int position);
 
     void onDestroy();
 }

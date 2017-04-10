@@ -1,8 +1,4 @@
-package com.arny.mvp.login;
-
-/**
- * Created by i.sedoy on 10.04.17.
- */
+package com.arny.mvp.oldlogin;
 
 public class LoginAPI {
     private final String LOGIN = "test";

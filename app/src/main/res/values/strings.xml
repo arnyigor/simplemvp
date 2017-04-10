@@ -1,12 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">MVP</string>
-
+    <string name="app_name">MVP Example</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="user_name">username</string>
+    <string name="password">password</string>
+    <string name="log_in">Log in</string>
+    <string name="title_activity_main">MVP Example</string>
+    <string name="username_error">Username cannot be empty</string>
+    <string name="password_error">Password cannot be empty</string>
+    <string name="title_activity_login">LoginActivity</string>
     <string name="login">Войти</string>
-    <string name="title_activity_main">MainActivity</string>
     <string name="logged_in">Вы на главной странице</string>
     <string name="enter_login">Введите логин</string>
     <string name="enter_password">введите пароль</string>
     <string name="empty_login">пустой логин</string>
     <string name="empty_pass">пустой пароль</string>
     <string name="login_or_pass_incorrect">Неверный логин или пароль</string>
+
 </resources>

@@ -18,8 +18,14 @@
 
 package com.arny.mvp.login;
 
-public interface LoginPresenter {
-    void validateCredentials(String username, String password);
+public interface LoginView {
+    void showProgress();
 
-    void onDestroy();
+    void hideProgress();
+
+    void setUsernameError();
+
+    void setPasswordError();
+
+    void navigateToHome();
 }
