@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">MVP</string>
+
+    <string name="login">Войти</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="logged_in">Вы на главной странице</string>
+    <string name="enter_login">Введите логин</string>
+    <string name="enter_password">введите пароль</string>
+    <string name="empty_login">пустой логин</string>
+    <string name="empty_pass">пустой пароль</string>
+    <string name="login_or_pass_incorrect">Неверный логин или пароль</string>
+</resources>
