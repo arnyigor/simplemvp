@@ -1,24 +1,31 @@
 package com.arny.mvp.start;
 
-class StartPresenter {
-    private final StartView view;
+import android.os.AsyncTask;
 
-    public StartPresenter(StartView view) {
-        this.view = view;
+public class StartPresenter {
+    private final StartView startView;
+
+    public StartPresenter(StartView startView) {
+        this.startView = startView;
     }
 
-    public void onStartButtonClick() {
-        view.startProgress();
-        new Thread(new Runnable() {
+    public void onEnter() {
+        new AsyncTask<Void, Void, Void>(){
             @Override
-            public void run() {
-                try {
-                    Thread.sleep(2000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+            protected void onPreExecute() {
+                startView.setProgress();
             }
-        }).start();
-        view.startLoginActivity();
+
+            @Override
+            protected void onPostExecute(Void aVoid) {
+                super.onPostExecute(aVoid);
+            }
+
+            @Override
+            protected Void doInBackground(Void... voids) {
+                startView.startProgress();
+                return null;
+            }
+        }.execute();
     }
 }

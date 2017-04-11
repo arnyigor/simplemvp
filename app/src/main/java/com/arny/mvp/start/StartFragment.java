@@ -1,8 +1,8 @@
 package com.arny.mvp.start;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -10,8 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ProgressBar;
-import com.arny.mvp.home.MainActivity;
+
 import com.arny.mvp.R;
 import com.arny.mvp.login.LoginActivity;
 
@@ -19,19 +18,26 @@ import com.arny.mvp.login.LoginActivity;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class StartFragment extends Fragment implements View.OnClickListener,StartView {
-    private Button mButtonLogin;
+public class StartFragment extends Fragment implements StartView {
+    private Button mButtonEnter;
     private Context context;
     private StartPresenter mStartPresenter;
-    private ProgressBar progressBar;
+    private ProgressDialog progressBar;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_login, container, false);
         this.context = container.getContext();
-        mButtonLogin = (Button) view.findViewById(R.id.btnLogin);
-        mButtonLogin.setOnClickListener(this);
+        mButtonEnter = (Button) view.findViewById(R.id.btnEnter);
+        mButtonEnter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mStartPresenter.onEnter();
+            }
+        });
+        progressBar = new ProgressDialog(context);
+        progressBar.setCancelable(false);
         return view;
     }
 
@@ -42,14 +48,14 @@ public class StartFragment extends Fragment implements View.OnClickListener,Star
     }
 
     @Override
-    public void onClick(View v) {
-        mStartPresenter.onStartButtonClick();
+    public void setProgress() {
+        progressBar.setTitle("Ожидание");
     }
 
     @Override
     public void startProgress() {
-        progressBar.setVisibility(View.VISIBLE);
-        mButtonLogin.setVisibility(View.GONE);
+        progressBar.show();
+        mButtonEnter.setVisibility(View.GONE);
     }
 
     @Override

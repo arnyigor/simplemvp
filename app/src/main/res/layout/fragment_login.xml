@@ -5,13 +5,8 @@
     android:layout_height="match_parent"
     tools:context="com.arny.mvp.start.StartFragment"
     android:orientation="vertical">
-    <ProgressBar
-            android:id="@+id/progress"
-            android:visibility="gone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
     <Button
-        android:id="@+id/btnLogin"
+        android:id="@+id/btnEnter"
         android:text="@string/start"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
