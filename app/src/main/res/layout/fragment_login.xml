@@ -3,23 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.arny.mvp.oldlogin.LoginFragment"
+    tools:context="com.arny.mvp.start.StartFragment"
     android:orientation="vertical">
-
-    <EditText
-        android:id="@+id/edtLogin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/enter_login"/>
-    <EditText
-        android:id="@+id/edtPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/enter_password"
-        android:inputType="textPassword"/>
+    <ProgressBar
+            android:id="@+id/progress"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
     <Button
         android:id="@+id/btnLogin"
-        android:text="@string/login"
+        android:text="@string/start"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 </LinearLayout>

@@ -10,7 +10,7 @@
     <string name="username_error">Username cannot be empty</string>
     <string name="password_error">Password cannot be empty</string>
     <string name="title_activity_login">LoginActivity</string>
-    <string name="login">Войти</string>
+    <string name="start">Войти</string>
     <string name="logged_in">Вы на главной странице</string>
     <string name="enter_login">Введите логин</string>
     <string name="enter_password">введите пароль</string>
